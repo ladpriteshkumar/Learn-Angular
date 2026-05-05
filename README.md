@@ -19,7 +19,7 @@ Components are the primary way Angular renders and updates the DOM efficiently.
 - Build scalable applications with clear structure
 
 ### what is @Component
-@Component is the Angular decorator that marks a TypeScript class as a component and provides the metadata Angular needs to create, render, and manage that component.
+**@Component** is the Angular **decorator** that marks a TypeScript class as a component and provides the metadata Angular needs to create, render, and manage that component.
 
 
 ### What @Component Actually Does
