@@ -1,16 +1,15 @@
 ## What is a Component in Angular?
-A component is the fundamental building block of the UI in angular application.
-
-Modern Angular uses standalone components, meaning they can declare their own dependencies without needing an NgModule, which makes the architecture more lightweight and modular.
+A component is the fundamental building block of the user interface(UI) in angular application.
 
 Components are the primary way Angular renders and updates the DOM efficiently.
 
-### Components help you:
-
+#### Components help you:
 - Break your app into small, manageable pieces
 - Reuse UI parts across pages
 - Keep logic, layout, and styling organized
 - Build scalable applications with clear structure
+
+Modern Angular uses standalone components, meaning they can declare their own dependencies without needing an NgModule, which makes the architecture more lightweight and modular.
 
 ### what is @Component
 **@Component** is the Angular **decorator** that marks a TypeScript class as a component and provides the metadata Angular needs to create, render, and manage that component.
