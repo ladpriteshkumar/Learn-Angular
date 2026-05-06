@@ -1,11 +1,12 @@
-# Decorators in Angular
+## What are decorators in Angular ?
+Decorators are special functions in `TypeScript`, prefix with @symbol, that attach metadata to class, property, method and parameter.
 
-Angular uses decorators to attach metadata to classes, methods, properties, and parameters. These decorators tell Angular how to treat the thing they’re decorating.
+In Angular, decorators tell the framework how to treat the class, property method and parameter based on decorator applied.
 
----
+
+**There are four main types of decorator in Angular.**
 
 ## 1. Class Decorators
-
 These define Angular building blocks.
 
 ### **@Component**
@@ -77,46 +78,4 @@ Skip the current injector and look in parent injectors.
 
 ### **@Host**
 Resolve dependency from the host element’s injector.
-
----
-
-## 5. Routing Decorators (Legacy / Less Common)
-
-> Modern Angular prefers functional guards, but these may still appear in older codebases.
-
-### **@CanActivate**
-Route guard for entering a route.
-
-### **@CanDeactivate**
-Guard for leaving a route.
-
-### **@Resolve**
-Pre-fetch data before route activation.
-
----
-
-## 6. Advanced / Rare Decorators
-
-### **@Attribute**
-Injects a static attribute value from the host element.
-
----
-
-## Summary Table
-
-| Decorator | Purpose |
-|----------|---------|
-| **@Component** | Create a component |
-| **@Directive** | Create a directive |
-| **@Pipe** | Create a pipe |
-| **@NgModule** | Create a module |
-| **@Injectable** | Register a service for DI |
-| **@Input** | Parent → Child data |
-| **@Output** | Child → Parent events |
-| **@ViewChild / @ViewChildren** | Access template children |
-| **@ContentChild / @ContentChildren** | Access projected content |
-| **@HostBinding** | Bind to host element |
-| **@HostListener** | Listen to host events |
-| **@Inject** | Explicit DI token |
-| **@Optional / @Self / @SkipSelf / @Host** | DI resolution control |
 
