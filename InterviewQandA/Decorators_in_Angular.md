@@ -7,75 +7,50 @@ In Angular, decorators tell the framework how to treat the class, property metho
 **There are four main types of decorator in Angular.**
 
 ## 1. Class Decorators
-These define Angular building blocks.
+**`@Component`** Defines a component with template, styles, and selector.
 
-### **@Component**
-Defines a component with template, styles, and selector.
+**`@Directive`** Defines a directive (structural or attribute).
 
-### **@Directive**
-Defines a directive (structural or attribute).
+**`@Pipe`**
 
-### **@Pipe**
-Defines a custom pipe.
+**`@NgModule`**
 
-### **@NgModule**
-Defines an Angular module.
-
-### **@Injectable**
-Marks a class as available for dependency injection.
+**`@Injectable`** Marks a class as available for dependency injection.
 
 ---
 
 ## 2. Property Decorators
+**`@Input`** Receives data from a parent component.
 
-Used inside classes to mark properties for Angular binding or DI.
+**`@Output`** Emits events to a parent component.
 
-### **@Input**
-Receives data from a parent component.
+**`@HostBinding`** Binds a property to a host element property or attribute.
 
-### **@Output**
-Emits events to a parent component.
+**`@ContentChild`** Gets a reference to projected content (single element).
 
-### **@HostBinding**
-Binds a property to a host element property or attribute.
+**`@ContentChildren`** Gets multiple projected content elements.
 
-### **@ContentChild**
-Gets a reference to projected content (single element).
+**`@ViewChild`** Gets a reference to a child component or DOM element.
 
-### **@ContentChildren**
-Gets multiple projected content elements.
-
-### **@ViewChild**
-Gets a reference to a child component or DOM element.
-
-### **@ViewChildren**
-Gets multiple child components or DOM elements.
+**`@ViewChildren`** Gets multiple child components or DOM elements.
 
 ---
 
 ## 3. Method Decorators
 
-### **@HostListener**
-Listens to events on the host element.
+**`@HostListener`** Listens to events on the host element.
 
 ---
 
 ## 4. Parameter Decorators
 
-Used for dependency injection.
+**`@Inject`** Explicitly specifies the provider token.
 
-### **@Inject**
-Explicitly specifies the provider token.
+**`@Optional`** Marks a dependency as optional.
 
-### **@Optional**
-Marks a dependency as optional.
+**`@Self`** Resolve dependency only from the current injector.
 
-### **@Self**
-Resolve dependency only from the current injector.
+**`@SkipSelf`** Skip the current injector and look in parent injectors.
 
-### **@SkipSelf**
-Skip the current injector and look in parent injectors.
-
-### **@Host**
-Resolve dependency from the host element’s injector.
+**`@Host`** Resolve dependency from the host element’s injector.
 
