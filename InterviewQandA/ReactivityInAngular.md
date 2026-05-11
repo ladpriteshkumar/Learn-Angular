@@ -31,19 +31,55 @@ Performance risk in large apps: unnecessary checks can become a bottleneck.
 
 
 
-### 3. OnPush: more controlled reactivity on top of Zone.js
+## 3. OnPush: more controlled reactivity on top of Zone.js
 Even before Signals, Angular gave us ChangeDetectionStrategy.OnPush to make reactivity more selective.
 
-## Default vs OnPush:   
+### Default vs OnPush:   
 **Default:** component is checked on every change detection cycle.   
 **OnPush:** component is checked only when specific triggers occur.
 
-## OnPush triggers:   
-@Input() reference changes (not mutation, but a new reference).   
-DOM event from the component or its children.   
-async pipe emits a new value.   
-Manual trigger via ChangeDetectorRef.markForCheck().
+### OnPush triggers:   
+- @Input() reference changes (not mutation, but a new reference).   
+- DOM event from the component or its children.   
+- async pipe emits a new value.   
+- Manual trigger via ChangeDetectorRef.markForCheck().
 
 ```
 “OnPush doesn’t change how Angular detects changes, but when it runs detection for a component. It narrows reactivity to specific triggers, which improves performance.”
 ```
+
+
+Modern reactivity: Angular Signals
+
+
+# Modern Reactivity in Angular: Signals
+
+Angular Signals introduce a new, fine‑grained reactivity model that makes UI updates more predictable, efficient, and explicit. Unlike Angular’s traditional Zone.js‑driven change detection, Signals update only the parts of the application that actually depend on the changed value.
+
+Signals are the foundation of Angular’s modern reactive system and a key part of Angular’s move toward zoneless, high‑performance applications.
+
+---
+
+## What Are Signals?
+
+A **Signal** is a reactive value that:
+
+- Holds state  
+- Notifies Angular when it changes  
+- Automatically updates any consumers (templates, computed values, effects)
+
+Signals are *pull‑based*: Angular tracks which consumers read a signal and updates only those consumers when the signal changes.
+
+### Basic Example
+
+```ts
+import { signal } from '@angular/core';
+
+export class CounterComponent {
+  count = signal(0);
+
+  increment() {
+    this.count.set(this.count() + 1);
+  }
+}
+
