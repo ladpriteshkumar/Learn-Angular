@@ -83,3 +83,14 @@ export class CounterComponent {
   }
 }
 
+```
+
+### Signals vs Traditional Change Detection
+
+| Feature | Zone.js Change Detection | Signals |
+| --- | --- | --- |
+| Trigger | Any async event | Only when a signal changes |
+| Update scope | Entire component tree | Only dependent consumers |
+| Performance | Can be wasteful | Highly optimized |
+| Predictability | Implicit | Explicit |
+| Zoneless support | ❌ No | ✔ Yes |
